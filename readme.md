@@ -70,7 +70,7 @@ Skilaboð skulu innihalda slóð á GitHub repo fyrir verkefni, og dæmatímaken
 * `StimmiKex`
 * `jonnigs`
 * `Tobbasn`
-* ``
+* `thth168`
 
 Hver dagur eftir skil dregur verkefni niður um 10%, allt að 30% ef skilað föstudaginn 16. október 2020 en þá lokar fyrir skil.
 
