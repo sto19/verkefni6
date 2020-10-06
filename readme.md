@@ -12,9 +12,20 @@ Loka verkefnið (í bili) er að setja upp tól og koma verkefninu fyrir á GitH
 
 ## Tól
 
+Til þess að geta notað þessi tól þarf að [setja upp Node.js, sækið „Recommended For Most Users“](https://nodejs.org/en/). Eftir að þið hafið keyrt uppsetningar forrit getið þið opnað Command prompt/terminal/skel og keyrt:
+
+```bash
+> node -v
+v12.18.4 # eða sú útgáfa sem þið sóttuð
+> npm -v
+6.14.8 # eða álíka
+```
+
+Ef þið fáið villu eftir að hafa keyrt annað hvort og uppsetning á Node.js gekk sem skildi skulið þið prófa að endurræsa tölvu. Ef ennþá ekki að virka, leitið hjálpar hjá Óla.
+
 Setja skal upp node-sass, browser-sync, stylelint og concurrently til að nýta Sass og geta gert breytingar sem sjást strax í vafra.
 
-Fyrst þarf að búa til `package.json` með því að keyra `npm init` í verkefnamöppu
+Fyrst þarf að búa til `package.json` með því að keyra `npm init` í verkefnamöppu.
 
 Síðan þarf að sækja hvert tól með `npm install <nafn á tóli>`.
 
