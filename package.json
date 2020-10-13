@@ -1,0 +1,32 @@
+{
+  "name": "vef1-2020-v6",
+  "version": "1.0.0",
+  "description": "## Lýsing",
+  "main": "index.js",
+  "scripts": {
+    "browser-sync": "browser-sync start --server --files '*'",
+    "sass": "node-sass --source-map-embed styles.scss styles.css",
+    "sass-watch": "node-sass --source-map-embed --watch *.scss --recursive styles.css",
+    "dev": "concurrently npm:sass-watch npm:browser-sync",
+    "lint-css": "stylelint styles.scss ./**/*/.scss",
+    "lint-scss": "stylelint styles.scss --syntax scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sto19/verkefni6.git"
+  },
+  "author": "Sigurður Þór Óskarsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sto19/verkefni6/issues"
+  },
+  "homepage": "https://github.com/sto19/verkefni6#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "concurrently": "^5.3.0",
+    "node-sass": "^4.14.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}
