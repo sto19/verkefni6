@@ -11,13 +11,11 @@
 }
 
 .event {
-  position: relative;
-  
   @include fill-container;
-  min-height: 250px;
 
   background-color: $light-gray;
-
+  min-height: 250px;
+  position: relative;
   word-break: break-word;
 
   &:last-child {
@@ -29,19 +27,22 @@
   }
 
   p {
-    margin-bottom: $margin-default;
     font-style: italic;
+    margin-bottom: $margin-default;
   }
 
   ul {
-    list-style: none;
     font-style: italic;
+    list-style: none;
   }
 
   .card {
-    position: absolute;
+    bottom: 0;
     display: flex;
-    left: 0; right: 0; top: 0; bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
     transform-style: preserve-3d;
     transition: transform 300ms ease-in-out;
   }
@@ -51,10 +52,11 @@
   }
 
   .face {
-    position: absolute;
     @include fill-container;
+
     backface-visibility: hidden;
     padding: 0.5rem;
+    position: absolute;
   }
 
   .face.back {
@@ -66,17 +68,15 @@
   }
 
   .front h3 {
-    margin: auto;
     font-size: 2em;
+    margin: auto;
     text-align: center;
   }
 
   .back {
-    height: 100%;
-  
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: space-between;
   }
-
 }

@@ -4,15 +4,15 @@
 // Allir stílar fyrir "global", þ.e.a.s. type selectorar, reset etc
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-size: 16px;
-  font-family: 'Open Sans', helvetica, arial, sans-serif;
   color: $dark-gray;
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-size: 16px;
 }
 
 a {
@@ -21,15 +21,14 @@ a {
 
 button {
   background-color: $dark-gray;
-  color: $white;
   border: 1px solid $black;
   border-radius: 5px;
+  color: $white;
   padding: 0.5rem;
-  word-break: initial;
-
   transition:
     color $transition-300-eio,
     background-color $transition-300-eio;
+  word-break: initial;
 
   &:hover {
     background-color: $white;
@@ -38,12 +37,15 @@ button {
 
   &:active {
     background-color: $dark-gray;
-    color: $white;
     border: 1px solid $black;
+    color: $white;
   }
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Montaga', Georgia, serif;
 }
 

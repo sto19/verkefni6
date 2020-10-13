@@ -4,68 +4,66 @@
 // Hér skal nota scss @for til að ítra út klösum fyrir grid
 
 .grid {
-    max-width: $max-width;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -10px;
-    margin-right: -10px;
-  }
-  
-  .col {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 100%;
-  }
+  margin: 0 auto;
+  max-width: $max-width;
+  overflow: hidden;
+}
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.col {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: 100% / 12 * $i;
+  }
+}
+
+@for $i from 1 through 3 {
+  .offset-col-#{$i} {
+    margin-left: 100% / 12 * $i;
+  }
+}
+
+/*
+medium—upp að 800px
+*/
+@media (max-width: $medium-device) {
   @for $i from 1 through 12 {
-    .col-#{$i} {
+    .col-md-#{$i} {
       width: 100% / 12 * $i;
     }
   }
 
   @for $i from 1 through 3 {
-    .offset-col-#{$i} {
+    .offset-col-md-#{$i} {
       margin-left: 100% / 12 * $i;
     }
   }
+}
 
-  /*
-  medium—upp að 800px
-  */
-  @media (max-width: $medium-device) {
-
-    @for $i from 1 through 12 {
-      .col-md-#{$i} {
-        width: 100% / 12 * $i;
-      }
-    }
-
-    @for $i from 1 through 3 {
-      .offset-col-md-#{$i} {
-        margin-left: 100% / 12 * $i;
-      }
+/*
+small—upp að 500px
+*/
+@media (max-width: $small-device) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      width: 100% / 12 * $i;
     }
   }
-  
-  /*
-  small—upp að 500px
-  */
-  @media (max-width: $small-device) {
- 
-    @for $i from 1 through 12 {
-      .col-sm-#{$i} {
-        width: 100% / 12 * $i;
-      }
-    }
 
-    @for $i from 1 through 3 {
-      .offset-col-sm-#{$i} {
-        margin-left: 100% / 12 * $i;
-      }
+  @for $i from 1 through 3 {
+    .offset-col-sm-#{$i} {
+      margin-left: 100% / 12 * $i;
     }
   }
+}
